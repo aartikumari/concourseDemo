@@ -1,1 +1,9 @@
-# Hi
+jobs:
+- name: test-pipe
+  serial: true
+  plan:
+  - get:
+    resource: test-example
+    trigger: true
+  - task: task-file
+    file: concourseDemo/ci/task.yml
