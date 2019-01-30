@@ -1,1 +1,23 @@
-#Hi
+---
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: canopyccfdocker/aws-concourse-docker
+
+inputs:
+- name: concourseDemo
+
+params:
+ CONCOURSE_URL: http://34.213.61.11
+ USERNAME: admin
+ PASSWORD: admin
+ PIPELINE: test-pipe
+
+
+#  API_ENDPOINT: https://api.sys.msp.cfdev.canopy-cloud.com
+#  CF_ADMIN_PASSWORD: vb9xpvt5bq6wjhug6u7e
+#  PROTO_BOSH_IP: 10.0.2.6
+run:
+  path: concourseDemo/ci/build.sh
