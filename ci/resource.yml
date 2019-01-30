@@ -1,1 +1,9 @@
+resources:
+- name: test-example
+  type: git
+  source:
+   uri: git@github.com:atos-cf/
+   branch: master
+#   private_key:
+#   paths:
 
